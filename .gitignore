@@ -1,0 +1,9 @@
+.DS_Store
+.cursor/
+*.plan.md
+
+# Original assets kept locally (website uses assets/ copies)
+Gemini_Generated_Image_*.png
+Screenshot*.png
+WhatsApp Image*.jpeg
+t.png

@@ -29,6 +29,7 @@
 }
 
 html {
+  color-scheme: light only;
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
 }
@@ -757,6 +758,46 @@ a:hover {
 
   .section {
     padding: 3.5rem 1rem;
+  }
+}
+
+/* Always use light theme (ignore system dark mode) */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: light only;
+  }
+
+  body {
+    background-color: var(--cream);
+    color: var(--brown);
+  }
+
+  .site-header {
+    background: rgba(245, 240, 230, 0.92);
+  }
+
+  .site-nav.open,
+  .site-nav {
+    background: rgba(245, 240, 230, 0.98);
+  }
+
+  .products,
+  .contact {
+    background: var(--white);
+  }
+
+  .product-card,
+  .contact-card {
+    background: var(--cream);
+    color: var(--brown);
+  }
+
+  .nav-link,
+  .brand,
+  .section-title,
+  .hero-title,
+  .product-name {
+    color: var(--forest);
   }
 }
 

@@ -30,7 +30,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
-          <li><a href="#products" class="nav-link" data-section="products">Product</a></li>
+          <li><a href="products/index.html" class="nav-link">Product</a></li>
           <li><a href="#about" class="nav-link" data-section="about">About Us</a></li>
           <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
         </ul>
@@ -62,66 +62,41 @@
       <div class="container">
         <header class="section-header">
           <h2 class="section-title">Our Products</h2>
-          <p class="section-lead">Carefully harvested and raised with the same care we put into our land.</p>
+          <p class="section-lead">Choose a category to explore what we offer at the farm.</p>
         </header>
 
-        <div class="product-grid">
-          <article class="product-card product-card--honey">
-            <div class="product-card-image">
-              <img src="assets/honey-label.png" alt="Ahluwalia Farm Multiflora Honey label" loading="lazy">
-            </div>
-            <div class="product-card-body">
-              <h3 class="product-name">Multiflora Honey</h3>
-              <p class="product-tagline">100% Organic &amp; Natural · Raw &amp; Unprocessed</p>
-              <p class="product-price"><span class="product-weight">500g</span> · <span class="product-amount">Rs. 400</span></p>
+        <div class="category-grid">
+          <a class="category-card" href="products/honey/index.html">
+            <div class="category-icon" aria-hidden="true">🍯</div>
+            <h3 class="category-title">Organic Honey</h3>
+            <p class="category-desc">Raw, unprocessed honey from diverse Punjab wildflowers.</p>
+            <span class="category-cta">Explore honey</span>
+          </a>
 
-              <ul class="product-features">
-                <li>Ingredients: 100% honey</li>
-                <li>Grade A+ quality</li>
-                <li>AGMARK certified honey</li>
-              </ul>
+          <a class="category-card" href="products/eggs/index.html">
+            <div class="category-icon" aria-hidden="true">🥚</div>
+            <h3 class="category-title">Cage-Free Eggs</h3>
+            <p class="category-desc">Farm-raised hens and fresh daily collection.</p>
+            <span class="category-cta">Explore eggs</span>
+          </a>
 
-              <div class="badges">
-                <span class="badge">Organic</span>
-                <span class="badge">Raw</span>
-                <span class="badge">Vegetarian</span>
-              </div>
+          <a class="category-card" href="products/turmeric/index.html">
+            <div class="category-icon" aria-hidden="true">🌿</div>
+            <h3 class="category-title">Turmeric</h3>
+            <p class="category-desc">Naturally sourced farm produce (availability varies).</p>
+            <span class="category-cta">Explore turmeric</span>
+          </a>
 
-              <details class="nutrition-details">
-                <summary>Nutrition highlights</summary>
-                <table class="nutrition-table">
-                  <tbody>
-                    <tr><th scope="row">Energy</th><td>320 kcal</td></tr>
-                    <tr><th scope="row">Carbohydrates</th><td>80g</td></tr>
-                    <tr><th scope="row">Protein</th><td>0g</td></tr>
-                    <tr><th scope="row">Fat</th><td>0g</td></tr>
-                  </tbody>
-                </table>
-              </details>
-            </div>
-          </article>
+          <a class="category-card" href="products/mustard-oil/index.html">
+            <div class="category-icon" aria-hidden="true">🫙</div>
+            <h3 class="category-title">Mustard Oil</h3>
+            <p class="category-desc">Traditional mustard oil for everyday cooking.</p>
+            <span class="category-cta">Explore mustard oil</span>
+          </a>
+        </div>
 
-          <article class="product-card product-card--eggs">
-            <div class="product-card-visual" aria-hidden="true">
-              <div class="egg-illustration">
-                <span class="egg-shape egg-shape--1"></span>
-                <span class="egg-shape egg-shape--2"></span>
-                <span class="egg-shape egg-shape--3"></span>
-              </div>
-            </div>
-            <div class="product-card-body">
-              <h3 class="product-name">Cage-Free Eggs</h3>
-              <p class="product-tagline">Farm-raised · Humanely cared for</p>
-              <p class="product-desc">Our hens roam freely on the farm, producing fresh, nutritious eggs with rich golden yolks — the way nature intended.</p>
-              <ul class="product-features">
-                <li>Cage-free, farm-raised hens</li>
-                <li>Fresh daily collection</li>
-                <li>No artificial additives</li>
-              </ul>
-              <p class="product-note"><em>Contact us for current availability and pricing.</em></p>
-              <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-            </div>
-          </article>
+        <div class="center-actions">
+          <a class="btn btn-secondary" href="products/index.html">View all categories</a>
         </div>
       </div>
     </section>
@@ -195,7 +170,7 @@
       <p class="footer-copy">&copy; <span id="year"></span> Ahluwalia Farm. All rights reserved.</p>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#home">Home</a>
-        <a href="#products">Product</a>
+        <a href="products/index.html">Product</a>
         <a href="#about">About Us</a>
         <a href="#contact">Contact</a>
       </nav>

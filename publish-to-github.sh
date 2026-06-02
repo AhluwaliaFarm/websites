@@ -11,7 +11,7 @@ if ! "$GH" auth status &>/dev/null; then
   exit 1
 fi
 
-REPO_NAME="${1:-ahluwalia-farm-website}"
+REPO_NAME="${1:-ahluwalia-farm-wwebsites}"
 
 if git remote get-url origin &>/dev/null; then
   echo "Remote 'origin' already exists."

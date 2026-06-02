@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Retailer login — Ahluwalia Farm trade pricing.">
+  <title>Retailer Login | Ahluwalia Farm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body
+  data-partner-role="retailer"
+  data-partner-root="../../"
+  data-catalog-path="catalog.html"
+  class="partner-page partner-login-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="../../index.html#home" class="brand">
+        <img src="../../assets/logo.jpeg" alt="Ahluwalia Farm logo" class="brand-logo" width="48" height="48">
+        <span class="brand-name">Ahluwalia Farm</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main" class="partner-login-main">
+    <section class="partner-login-card reveal">
+      <h1 class="page-title">Retailer login</h1>
+      <p class="page-subtitle">View your cost and suggested retail prices.</p>
+
+      <form id="partner-login-form" class="partner-login-form" method="post" action="catalog.html">
+        <label for="partnerId">Partner ID</label>
+        <input type="text" id="partnerId" name="partnerId" autocomplete="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+
+      <p id="login-error" class="partner-login-error" hidden role="alert"></p>
+
+      <p class="partner-login-alt">
+        <a href="../distributor/login.html">Distributor login</a>
+        ·
+        <a href="../../index.html#home">Back to public site</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; <span id="year"></span> Ahluwalia Farm. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/auth-config.js"></script>
+  <script src="../../js/auth.js"></script>
+  <script src="../../js/partner-login.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

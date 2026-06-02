@@ -1,0 +1,33 @@
+{
+  "partners": [
+    {
+      "id": "DIST001",
+      "role": "distributor",
+      "name": "Sample Distributor",
+      "passwordHash": "ee97731008505962ec5fffa16ad3afa3754dac7bf603696205c40924af37f1f1",
+      "priceOverrides": {
+        "multiflora-500g": {
+          "wholesale": 200,
+          "trade": 340
+        },
+        
+      "kashmiri-acacia-jar-500g": {
+          "wholesale": 200,
+          "trade": 340
+        }
+      }
+    },
+    {
+      "id": "RET001",
+      "role": "retailer",
+      "name": "Sample Retailer",
+      "passwordHash": "1462d4bff18c1282181497841110f01eae41c22251602158c9c8e120f40dfd9a",
+      "priceOverrides": {
+        "multiflora-500g": {
+          "trade": 360,
+          "retail": 410
+        }
+      }
+    }
+  ]
+}

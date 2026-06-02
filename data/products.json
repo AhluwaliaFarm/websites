@@ -1,0 +1,102 @@
+{
+  "currency": "INR",
+  "currencySymbol": "Rs.",
+  "products": [
+    {
+      "id": "multiflora-500g",
+      "name": "Multiflora Honey",
+      "category": "honey",
+      "weight": "500g",
+      "tagline": "100% Organic & Natural · Raw & Unprocessed",
+      "description": "A rich, balanced honey collected from diverse wildflowers. Enjoy it as a natural sweetener, with warm water, or with breakfast.",
+      "image": "assets/honey-label.png",
+      "publicDetailUrl": "products/honey/multiflora.html",
+      "badges": ["Organic", "Raw", "Vegetarian"],
+      "prices": {
+        "wholesale": 300,
+        "trade": 350,
+        "retail": 400
+      }
+    },
+    {
+      "id": "kashmiri-acacia-jar",
+      "name": "Kashmiri Acacia Honey",
+      "category": "honey",
+      "weight": "Jar",
+      "tagline": "Light, floral · Naturally mild",
+      "description": "Delicate acacia honey with a mild, floral character. Ideal for tea, toast, and everyday use.",
+      "image": "assets/honey-label.png",
+      "publicDetailUrl": "products/honey/kashmiri-acacia.html",
+      "badges": ["Organic", "Raw"],
+      "prices": {
+        "wholesale": null,
+        "trade": null,
+        "retail": null
+      }
+    },
+    {
+      "id": "mustard-honey-jar",
+      "name": "Mustard Honey",
+      "category": "honey",
+      "weight": "Jar",
+      "tagline": "Bold, earthy · Punjab mustard blossoms",
+      "description": "Distinctive honey from mustard blossoms — bold and earthy, a Punjab specialty.",
+      "image": "assets/honey-label.png",
+      "publicDetailUrl": "products/honey/mustard-honey.html",
+      "badges": ["Organic", "Raw"],
+      "prices": {
+        "wholesale": null,
+        "trade": null,
+        "retail": null
+      }
+    },
+    {
+      "id": "cage-free-eggs",
+      "name": "Fresh Cage-Free Eggs",
+      "category": "eggs",
+      "weight": "Per dozen",
+      "tagline": "Farm-raised hens · Fresh daily collection",
+      "description": "Eggs from hens raised with access to open spaces. Contact us for current availability and pack sizes.",
+      "image": "assets/logo.jpeg",
+      "publicDetailUrl": "products/eggs/index.html",
+      "badges": ["Cage-free"],
+      "prices": {
+        "wholesale": null,
+        "trade": null,
+        "retail": null
+      }
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric",
+      "category": "turmeric",
+      "weight": "Varies",
+      "tagline": "Naturally sourced farm produce",
+      "description": "Farm-sourced turmeric. Availability and pack sizes vary by season — contact us for details.",
+      "image": "assets/logo.jpeg",
+      "publicDetailUrl": "products/turmeric/index.html",
+      "badges": ["Organic"],
+      "prices": {
+        "wholesale": null,
+        "trade": null,
+        "retail": null
+      }
+    },
+    {
+      "id": "mustard-oil",
+      "name": "Mustard Oil",
+      "category": "mustard-oil",
+      "weight": "Varies",
+      "tagline": "Traditional cold-pressed style",
+      "description": "Traditional mustard oil for everyday cooking. Contact us for bottle sizes and pricing.",
+      "image": "assets/logo.jpeg",
+      "publicDetailUrl": "products/mustard-oil/index.html",
+      "badges": [],
+      "prices": {
+        "wholesale": null,
+        "trade": null,
+        "retail": null
+      }
+    }
+  ]
+}

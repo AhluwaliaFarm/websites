@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Your order | Ahluwalia Farm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body
+  data-partner-role="distributor"
+  data-partner-root="../../"
+  data-login-path="login.html"
+  class="partner-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header site-header--partner" id="site-header">
+    <div class="header-inner">
+      <a href="../../index.html#home" class="brand">
+        <img src="../../assets/logo.jpeg" alt="Ahluwalia Farm logo" class="brand-logo" width="68" height="68">
+        <span class="brand-name">Ahluwalia Farm</span>
+      </a>
+      <div class="partner-header-actions">
+        <span id="partner-role-badge" class="partner-role-badge"></span>
+        <a href="order.html" id="partner-cart-link" class="partner-cart-link partner-cart-link--active">Order (0)</a>
+        <button type="button" id="partner-logout" class="btn btn-secondary btn-sm">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero reveal">
+      <div class="container">
+        <h1 class="page-title">Your order</h1>
+        <p class="page-subtitle">Review items and send your order by WhatsApp or email.</p>
+      </div>
+    </section>
+
+    <section class="section products reveal">
+      <div class="container">
+        <div id="partner-cart" class="partner-cart"></div>
+        <div class="center-actions">
+          <a class="btn btn-secondary" href="catalog.html">Continue shopping</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; <span id="year"></span> Ahluwalia Farm. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/auth-config.js"></script>
+  <script src="../../js/auth.js"></script>
+  <script src="../../js/partner-pricing.js"></script>
+  <script src="../../js/partner-order.js"></script>
+  <script src="../../js/partner-order-page.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

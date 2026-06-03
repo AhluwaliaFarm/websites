@@ -15,7 +15,7 @@
   --font-heading: "Playfair Display", Georgia, serif;
   --font-body: "Source Sans 3", system-ui, sans-serif;
 
-  --header-height: 72px;
+  --header-height: 88px;
   --radius: 12px;
   --transition: 0.35s ease;
 }
@@ -119,8 +119,8 @@ a:hover {
 }
 
 .brand-logo {
-  width: 48px;
-  height: 48px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -269,9 +269,9 @@ a:hover {
 }
 
 .hero-logo {
-  width: clamp(160px, 28vw, 220px);
+  width: clamp(220px, 32vw, 320px);
   height: auto;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1.75rem;
   border-radius: 50%;
   animation: logoFadeIn 0.8s ease forwards;
 }
@@ -298,7 +298,7 @@ a:hover {
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: clamp(1.75rem, 4.5vw, 2.35rem);
   font-weight: 600;
   color: var(--forest);
   line-height: 1.3;
@@ -308,7 +308,7 @@ a:hover {
 .hero-subtitle {
   color: var(--brown-light);
   margin-bottom: 2rem;
-  font-size: 1.05rem;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
 }
 
 /* Hero decor */
@@ -965,6 +965,13 @@ a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .brand-logo {
+    width: 56px;
+    height: 56px;
+  }
+}
+
 @media (max-width: 480px) {
   .brand-name {
     font-size: 1rem;
@@ -1040,6 +1047,56 @@ a:hover {
   background: rgba(45, 74, 53, 0.1);
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
+}
+
+.partner-cart-link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--forest);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.partner-cart-link:hover {
+  color: var(--white);
+  background: var(--forest-light);
+  transform: translateY(-1px);
+}
+
+.partner-cart-link--active {
+  background: var(--honey);
+  color: var(--forest);
+}
+
+.partner-cart-link--active:hover {
+  color: var(--forest);
+  background: var(--honey-light);
+}
+
+.partner-breadcrumbs {
+  padding-top: 0;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.partner-add-feedback {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(201, 162, 39, 0.15);
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--forest);
+}
+
+.partner-add-feedback a {
+  font-weight: 700;
+}
+
+.partner-detail-actions {
+  align-items: center;
 }
 
 .btn-sm {

@@ -6,12 +6,13 @@
     var role = body.getAttribute("data-partner-role");
     var root = body.getAttribute("data-partner-root") || "../../";
     var loginPath = body.getAttribute("data-login-path");
-    var catalogPath = body.getAttribute("data-catalog-path");
+    var catalogPath = body.getAttribute("data-catalog-path") || "catalog.html";
+    var categoryBase = body.getAttribute("data-category-base") || "category.html";
     var panel = document.getElementById("partner-product-panel");
     var statusEl = document.getElementById("product-status");
     var badge = document.getElementById("partner-role-badge");
     var logoutBtn = document.getElementById("partner-logout");
-    var cartEl = document.getElementById("partner-cart");
+    var addFeedback = document.getElementById("partner-add-feedback");
     var params = new URLSearchParams(window.location.search);
     var productId = params.get("id");
 
@@ -36,6 +37,10 @@
       });
     }
 
+    if (window.PartnerOrder && window.PartnerOrder.updateHeaderBadge) {
+      window.PartnerOrder.updateHeaderBadge();
+    }
+
     if (!productId) {
       if (statusEl) {
         statusEl.textContent = "No product selected.";
@@ -57,6 +62,9 @@
         }
 
         var symbol = data.currencySymbol || "Rs.";
+        var catMeta = PartnerCategories.getCategoryMeta(product.category);
+        var categoryUrl =
+          categoryBase + "?cat=" + encodeURIComponent(product.category);
         var badges = (product.badges || [])
           .map(function (b) {
             return '<span class="badge">' + PartnerPricing.escapeHtml(b) + "</span>";
@@ -71,6 +79,15 @@
 
         document.title = product.name + " | Ahluwalia Farm";
 
+        var crumb = document.getElementById("product-category-crumb");
+        var categoryLink = document.getElementById("product-category-link");
+        if (crumb && catMeta) {
+          crumb.textContent = catMeta.title;
+        }
+        if (categoryLink) {
+          categoryLink.href = categoryUrl;
+        }
+
         var o = (overrides && overrides[product.id]) || {};
         var effectivePrices = {
           wholesale:
@@ -81,15 +98,6 @@
 
         var buyPrice = role === "distributor" ? effectivePrices.wholesale : effectivePrices.trade;
         var buyLabel = role === "distributor" ? "Wholesale" : "Your cost";
-
-        if (cartEl && window.PartnerOrder) {
-          window.PartnerOrder.renderCart(cartEl, {
-            role: role,
-            partnerId: partnerId,
-            partnerName: partnerName,
-            currencySymbol: symbol
-          });
-        }
 
         if (panel) {
           panel.innerHTML =
@@ -122,10 +130,10 @@
             '<p class="product-desc">' +
             PartnerPricing.escapeHtml(product.description || "") +
             "</p>" +
-            '<div class="detail-actions">' +
+            '<div class="detail-actions partner-detail-actions">' +
             '<label class="partner-order-label" for="detail-qty">Qty</label>' +
             '<input class="partner-order-qty" id="detail-qty" type="number" min="1" value="1" inputmode="numeric">' +
-            '<button type="button" class="btn btn-primary btn-sm partner-order-add" id="detail-add" data-add="' +
+            '<button type="button" class="btn btn-primary partner-order-add" id="detail-add" data-add="' +
             PartnerPricing.escapeHtml(product.id) +
             '" data-name="' +
             PartnerPricing.escapeHtml(product.name) +
@@ -136,9 +144,12 @@
             '" data-price-label="' +
             PartnerPricing.escapeHtml(buyLabel) +
             '">Add to order</button>' +
-            '<a class="btn btn-secondary btn-sm" href="' +
-            catalogPath +
-            '">Back to catalog</a>' +
+            '<a class="btn btn-secondary" href="order.html">View order</a>' +
+            '<a class="btn btn-secondary" href="' +
+            categoryUrl +
+            '">Back to ' +
+            PartnerPricing.escapeHtml(catMeta ? catMeta.title : "category") +
+            "</a>" +
             "</div>" +
             publicLink +
             "</aside></div>";
@@ -148,7 +159,7 @@
           }
         }
 
-        if (panel && cartEl && window.PartnerOrder) {
+        if (panel && window.PartnerOrder) {
           panel.addEventListener("click", function (e) {
             var t = e.target;
             if (!t) return;
@@ -165,12 +176,11 @@
               unitPrice: price === "" ? null : price,
               roleUnitLabel: t.getAttribute("data-price-label") || ""
             });
-            window.PartnerOrder.renderCart(cartEl, {
-              role: role,
-              partnerId: partnerId,
-              partnerName: partnerName,
-              currencySymbol: symbol
-            });
+            if (addFeedback) {
+              addFeedback.hidden = false;
+              addFeedback.innerHTML =
+                'Added to your order. <a href="order.html">Review order</a>';
+            }
           });
         }
       })

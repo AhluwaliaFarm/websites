@@ -16,18 +16,19 @@
   data-partner-role="distributor"
   data-partner-root="../../"
   data-login-path="login.html"
-  data-product-base="product.html"
+  data-category-base="category.html"
   class="partner-page">
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header site-header--partner" id="site-header">
     <div class="header-inner">
       <a href="../../index.html#home" class="brand">
-        <img src="../../assets/logo.jpeg" alt="Ahluwalia Farm logo" class="brand-logo" width="48" height="48">
+        <img src="../../assets/logo.jpeg" alt="Ahluwalia Farm logo" class="brand-logo" width="68" height="68">
         <span class="brand-name">Ahluwalia Farm</span>
       </a>
       <div class="partner-header-actions">
         <span id="partner-role-badge" class="partner-role-badge"></span>
+        <a href="order.html" id="partner-cart-link" class="partner-cart-link">Order (0)</a>
         <button type="button" id="partner-logout" class="btn btn-secondary btn-sm">Log out</button>
       </div>
     </div>
@@ -37,15 +38,14 @@
     <section class="page-hero reveal">
       <div class="container">
         <h1 class="page-title">Distributor catalog</h1>
-        <p class="page-subtitle">Wholesale and sell-to-retailer pricing for all products.</p>
+        <p class="page-subtitle">Choose a product category to view wholesale pricing and place orders.</p>
       </div>
     </section>
 
     <section class="section products reveal">
       <div class="container">
-        <div id="partner-cart" class="partner-cart"></div>
-        <p id="catalog-status" class="partner-status">Loading products…</p>
-        <div id="partner-product-grid" class="product-grid"></div>
+        <p id="catalog-status" class="partner-status">Loading categories…</p>
+        <div id="partner-category-grid"></div>
       </div>
     </section>
   </main>
@@ -59,6 +59,7 @@
   <script src="../../js/auth-config.js"></script>
   <script src="../../js/auth.js"></script>
   <script src="../../js/partner-pricing.js"></script>
+  <script src="../../js/partner-categories.js"></script>
   <script src="../../js/partner-order.js"></script>
   <script src="../../js/partner-catalog.js"></script>
   <script src="../../js/main.js"></script>

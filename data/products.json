@@ -9,7 +9,7 @@
       "weight": "500g",
       "tagline": "100% Organic & Natural · Raw & Unprocessed",
       "description": "A rich, balanced honey collected from diverse wildflowers. Enjoy it as a natural sweetener, with warm water, or with breakfast.",
-      "image": "assets/honey-label.png",
+      "image": "assets/honey-main.png",
       "publicDetailUrl": "products/honey/multiflora.html",
       "badges": ["Organic", "Raw", "Vegetarian"],
       "prices": {
@@ -25,7 +25,7 @@
       "weight": "Jar",
       "tagline": "Light, floral · Naturally mild",
       "description": "Delicate acacia honey with a mild, floral character. Ideal for tea, toast, and everyday use.",
-      "image": "assets/honey-label.png",
+      "image": "assets/kashmiri-acacia-front.png",
       "publicDetailUrl": "products/honey/kashmiri-acacia.html",
       "badges": ["Organic", "Raw"],
       "prices": {
@@ -41,7 +41,7 @@
       "weight": "Jar",
       "tagline": "Bold, earthy · Punjab mustard blossoms",
       "description": "Distinctive honey from mustard blossoms — bold and earthy, a Punjab specialty.",
-      "image": "assets/honey-label.png",
+      "image": "assets/honey-main.png",
       "publicDetailUrl": "products/honey/mustard-honey.html",
       "badges": ["Organic", "Raw"],
       "prices": {
@@ -51,13 +51,45 @@
       }
     },
     {
-      "id": "cage-free-eggs",
-      "name": "Fresh Cage-Free Eggs",
+      "id": "eggs-6-pack",
+      "name": "Cage-Free Eggs (6 pack)",
       "category": "eggs",
-      "weight": "Per dozen",
+      "weight": "6 eggs",
       "tagline": "Farm-raised hens · Fresh daily collection",
-      "description": "Eggs from hens raised with access to open spaces. Contact us for current availability and pack sizes.",
-      "image": "assets/logo.jpeg",
+      "description": "Six fresh cage-free eggs from hens raised with access to open spaces on Ahluwalia Farm.",
+      "image": "assets/egg-6-pack.png",
+      "publicDetailUrl": "products/eggs/index.html",
+      "badges": ["Cage-free"],
+      "prices": {
+        "wholesale": null,
+        "trade": null,
+        "retail": null
+      }
+    },
+    {
+      "id": "eggs-12-pack",
+      "name": "Cage-Free Eggs (12 pack)",
+      "category": "eggs",
+      "weight": "12 eggs",
+      "tagline": "Farm-raised hens · Fresh daily collection",
+      "description": "One dozen fresh cage-free eggs from hens raised with access to open spaces on Ahluwalia Farm.",
+      "image": "assets/egg-12-pack.png",
+      "publicDetailUrl": "products/eggs/index.html",
+      "badges": ["Cage-free"],
+      "prices": {
+        "wholesale": null,
+        "trade": null,
+        "retail": null
+      }
+    },
+    {
+      "id": "eggs-30-pack",
+      "name": "Cage-Free Eggs (30 pack)",
+      "category": "eggs",
+      "weight": "30 eggs",
+      "tagline": "Farm-raised hens · Fresh daily collection",
+      "description": "Thirty fresh cage-free eggs — ideal for retailers and regular wholesale orders.",
+      "image": "assets/egg-30-pack.png",
       "publicDetailUrl": "products/eggs/index.html",
       "badges": ["Cage-free"],
       "prices": {
@@ -73,7 +105,7 @@
       "weight": "Varies",
       "tagline": "Naturally sourced farm produce",
       "description": "Farm-sourced turmeric. Availability and pack sizes vary by season — contact us for details.",
-      "image": "assets/logo.jpeg",
+      "image": "assets/turmeric-main.png",
       "publicDetailUrl": "products/turmeric/index.html",
       "badges": ["Organic"],
       "prices": {
@@ -89,7 +121,7 @@
       "weight": "Varies",
       "tagline": "Traditional cold-pressed style",
       "description": "Traditional mustard oil for everyday cooking. Contact us for bottle sizes and pricing.",
-      "image": "assets/logo.jpeg",
+      "image": "assets/mustard-oil-main.png",
       "publicDetailUrl": "products/mustard-oil/index.html",
       "badges": [],
       "prices": {

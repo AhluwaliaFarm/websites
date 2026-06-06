@@ -6,25 +6,25 @@
       id: "honey",
       title: "Organic Honey",
       description: "Raw, unprocessed honey from diverse Punjab wildflowers.",
-      icon: "🍯"
+      image: "assets/honey-main.png"
     },
     {
       id: "eggs",
       title: "Cage-Free Eggs",
       description: "Farm-raised hens and fresh daily collection.",
-      icon: "🥚"
+      image: "assets/eggs-main.png"
     },
     {
       id: "turmeric",
       title: "Turmeric",
       description: "Naturally sourced farm produce (availability varies).",
-      icon: "🌿"
+      image: "assets/turmeric-main.png"
     },
     {
       id: "mustard-oil",
       title: "Mustard Oil",
       description: "Traditional mustard oil for everyday cooking.",
-      icon: "🫙"
+      image: "assets/mustard-oil-main.png"
     }
   ];
 
@@ -36,18 +36,24 @@
     );
   }
 
-  function renderCategoryGrid(container, categoryBase) {
+  function renderCategoryGrid(container, categoryBase, root) {
     if (!container) return;
     var base = categoryBase || "category.html";
+    var assetRoot = root || "";
     var html = CATEGORIES.map(function (cat) {
+      var imgSrc = assetRoot + cat.image;
       return (
         '<a class="category-card" href="' +
         base +
         "?cat=" +
         encodeURIComponent(cat.id) +
         '">' +
-        '<div class="category-icon" aria-hidden="true">' +
-        cat.icon +
+        '<div class="category-image">' +
+        '<img src="' +
+        imgSrc +
+        '" alt="' +
+        PartnerPricing.escapeHtml(cat.title) +
+        '" loading="lazy">' +
         "</div>" +
         "<h2 class=\"category-title\">" +
         PartnerPricing.escapeHtml(cat.title) +

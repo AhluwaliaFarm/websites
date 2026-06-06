@@ -10,6 +10,7 @@
     var badge = document.getElementById("partner-role-badge");
     var logoutBtn = document.getElementById("partner-logout");
     var categoryBase = body.getAttribute("data-category-base") || "category.html";
+    var root = body.getAttribute("data-partner-root") || "../../";
 
     if (!PartnerAuth.requireRole(role, loginPath)) {
       return;
@@ -36,7 +37,7 @@
     }
 
     if (grid && window.PartnerCategories) {
-      PartnerCategories.renderCategoryGrid(grid, categoryBase);
+      PartnerCategories.renderCategoryGrid(grid, categoryBase, root);
       if (statusEl) {
         statusEl.remove();
       }

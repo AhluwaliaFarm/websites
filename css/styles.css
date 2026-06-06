@@ -416,16 +416,24 @@ a:hover {
   border-color: var(--honey-light);
 }
 
-.category-icon {
-  width: 44px;
-  height: 44px;
+.category-image {
+  background: var(--white);
   border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: rgba(201, 162, 39, 0.12);
-  color: var(--forest);
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  overflow: hidden;
+  border: 1px solid var(--cream-dark);
+}
+
+.category-image img {
+  max-height: 150px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .category-title {

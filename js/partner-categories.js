@@ -18,7 +18,7 @@
       id: "turmeric",
       title: "Turmeric",
       description: "Naturally sourced farm produce (availability varies).",
-      image: "assets/turmeric-main.png"
+      image: "assets/turmeric-main.jpeg"
     },
     {
       id: "mustard-oil",
